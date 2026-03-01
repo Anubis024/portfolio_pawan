@@ -1,0 +1,96 @@
+/* App-specific styles */
+
+/* Smooth scrolling for the entire page */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure pinned sections stack correctly */
+section {
+  will-change: transform;
+}
+
+/* Hero plate responsive adjustments */
+@media (max-width: 768px) {
+  .hero-plate {
+    top: 12vh !important;
+    min-height: auto !important;
+  }
+}
+
+/* Vertical labels styling */
+.hero-vertical,
+.consultant-vertical,
+.global-vertical,
+.services-vertical,
+.industries-vertical,
+.experience-vertical {
+  white-space: nowrap;
+}
+
+/* Project card hover effects */
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+}
+
+/* Timeline entry styling */
+.timeline-entry {
+  transition: opacity 0.3s ease;
+}
+
+/* Form input focus states */
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 0 2px rgba(211, 84, 0, 0.2);
+}
+
+/* Button hover transitions */
+button {
+  transition: all 0.2s ease;
+}
+
+/* Navigation blend mode adjustment for light backgrounds */
+nav {
+  mix-blend-mode: difference;
+}
+
+/* Ensure text remains readable on all backgrounds */
+.text-shadow {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Map animation */
+@keyframes pulse-dot {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.3;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+/* Responsive typography adjustments */
+@media (max-width: 640px) {
+  .font-display {
+    letter-spacing: -0.01em;
+  }
+}
+
+/* Print styles */
+@media print {
+  .grain-overlay,
+  nav {
+    display: none;
+  }
+  
+  section {
+    height: auto !important;
+    page-break-inside: avoid;
+  }
+}
